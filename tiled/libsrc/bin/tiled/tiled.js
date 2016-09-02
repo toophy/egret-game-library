@@ -1185,6 +1185,9 @@ var tiled;
                             return;
                         }
                     }
+                    else if ((a + 1) >= this.numChildren) {
+                        return;
+                    }
                 }
                 this.setChildIndex(s, this.numChildren);
             }

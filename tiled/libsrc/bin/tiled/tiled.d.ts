@@ -670,7 +670,7 @@ declare module tiled {
         /**
          * 排序(z序)插入
          */
-        addZChild(s: egret.DisplayObject): void;
+        addZChild(s: egret.Sprite): void;
         /**
          * 渲染
          * @version Egret 3.0.3

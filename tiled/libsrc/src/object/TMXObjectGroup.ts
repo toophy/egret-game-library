@@ -60,7 +60,7 @@ module tiled {
 		/**
 		 * 排序(z序)插入
 		 */
-		public addZChild(s: egret.DisplayObject) {
+		public addZChild(s: egret.Sprite) {
 			let my_z: number = (s.y + s.height) * this._tilesets.tilemap.tilewidth * this._tilesets.tilemap.cols + s.x + s.width;
 
 			if (this.numChildren > 0) {
@@ -76,6 +76,8 @@ module tiled {
 							}
 							return;
 						}
+					} else if ((a+1)>=this.numChildren) {
+						return;
 					}
 				}
 				this.setChildIndex(s, this.numChildren);
