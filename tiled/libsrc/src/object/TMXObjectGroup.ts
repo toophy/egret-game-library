@@ -61,7 +61,7 @@ module tiled {
 		 * 排序(z序)插入
 		 */
 		public addZChild(s: egret.DisplayObject) {
-			let my_z: number = (s.y + s.height) * this._tilesets.tilemap.tilewidth * this._tilesets.tilemap.cols + s.x+s.width;
+			let my_z: number = (s.y + s.height) * this._tilesets.tilemap.tilewidth * this._tilesets.tilemap.cols + s.x + s.width;
 
 			if (this.numChildren > 0) {
 				for (var a = 0; a < this.numChildren; a++) {
@@ -77,9 +77,8 @@ module tiled {
 							return;
 						}
 					}
-
-					this.setChildIndex(s, this.numChildren);
 				}
+				this.setChildIndex(s, this.numChildren);
 			} else {
 				this.setChildIndex(s, 0);
 			}

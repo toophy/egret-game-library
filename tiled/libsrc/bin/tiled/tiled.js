@@ -1185,8 +1185,8 @@ var tiled;
                             return;
                         }
                     }
-                    this.setChildIndex(s, this.numChildren);
                 }
+                this.setChildIndex(s, this.numChildren);
             }
             else {
                 this.setChildIndex(s, 0);
