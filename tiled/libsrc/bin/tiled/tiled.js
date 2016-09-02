@@ -1177,10 +1177,10 @@ var tiled;
                         var z = (val.y + val.height) * this._tilesets.tilemap.tilewidth * this._tilesets.tilemap.cols + val.x + val.width;
                         if (my_z < z) {
                             if (a > 0) {
-                                this.setChildIndex(s, a - 1);
+                                this.addChildAt(s, a - 1);
                             }
                             else {
-                                this.setChildIndex(s, 0);
+                                this.addChildAt(s, 0);
                             }
                             return;
                         }
@@ -1189,10 +1189,10 @@ var tiled;
                         return;
                     }
                 }
-                this.setChildIndex(s, this.numChildren);
+                this.addChildAt(s, this.numChildren);
             }
             else {
-                this.setChildIndex(s, 0);
+                this.addChild(s);
             }
         };
         /**
